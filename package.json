@@ -2,6 +2,7 @@
   "name": "project_framework17",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://marcellinok.github.io/Sawitech",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tensorflow-models/mobilenet": "^2.1.1",
@@ -61,4 +62,3 @@
   "author": "",
   "license": "ISC"
 }
-  

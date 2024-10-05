@@ -1,68 +1,5 @@
 /* Animasi Fade In */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Animasi Slide In dari Bawah */
-  @keyframes slideIn {
-    from {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  /* Animasi Zoom In untuk Gambar Latar */
-  @keyframes zoomIn {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.1);
-    }
-  }
-  
-  /* Menambahkan Kelas Animasi */
-  .animate-fade-in {
-    animation: fadeIn 1.5s ease-in-out forwards;
-  }
-  
-  .animate-slide-in {
-    animation: slideIn 1.5s ease-in-out forwards;
-  }
-  
-  .animate-zoom-in {
-    animation: zoomIn 10s ease-in-out infinite alternate;
-  }
-  
-  /* Hero Section Styling */
-  .hero-background {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-    animation: zoomIn 20s ease-in-out infinite alternate; /* Menambahkan animasi zoom */
-  }
-  
-  .hero-content {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 4rem; /* Sesuai dengan px-16 */
-    font-family: sans-serif;
-    z-index: 2;
-  }/* Animasi Fade In */
-@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -110,7 +47,7 @@
 .hero-background {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100vh; /* Tinggi penuh layar */
   position: relative;
   animation: zoomIn 20s ease-in-out infinite alternate; /* Menambahkan animasi zoom */
 }
@@ -120,28 +57,41 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 4rem; /* Sesuai dengan px-16 */
+  justify-content: flex-start; /* Mengubah ini ke flex-start untuk memastikan konten rata kiri */
+  padding-left: 4rem; /* Padding kiri untuk desktop */
+  padding-right: 4rem; /* Padding kanan untuk desktop */
   font-family: sans-serif;
   z-index: 2;
+  text-align: left; /* Pastikan teks rata kiri */
 }
 
 /* Media Query untuk Tampilan Mobile */
 @media (max-width: 768px) {
   .hero-content {
-    padding-left: 1.5rem; /* Kurangi padding untuk layar kecil */
-    padding-right: 1.5rem; /* Tambahkan padding kanan agar teks lebih mudah dibaca */
+      padding-left: 1.5rem; /* Kurangi padding untuk layar kecil */
+      padding-right: 1.5rem; /* Tambahkan padding kanan agar teks lebih mudah dibaca */
+      justify-content: flex-start; /* Pastikan konten tetap di atas */
+      text-align: left; /* Pastikan teks tetap rata kiri */
   }
 
   h1 {
-    font-size: 2rem; /* Kurangi ukuran font pada layar kecil */
+      font-size: 2rem; /* Ukuran font untuk h1 di mobile */
+  }
+
+  h1:nth-of-type(2) {
+      font-size: 3rem; /* Ukuran font untuk headline di mobile */
   }
 
   p {
-    font-size: 1rem; /* Kurangi ukuran deskripsi */
+      font-size: 1rem; /* Ukuran font untuk deskripsi */
   }
 
   .hero-background {
-    height: 80vh; /* Kurangi tinggi hero untuk layar kecil */
+      height: 80vh; /* Sesuaikan tinggi background untuk mobile */
+  }
+
+  button {
+      width: 100%; /* Tombol lebar penuh di mobile */
+      margin-top: 1rem; /* Tambahkan margin atas agar tidak menempel pada teks */
   }
 }

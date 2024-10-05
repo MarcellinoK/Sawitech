@@ -3,8 +3,11 @@ import './HeroSection.css'; // Import file CSS untuk animasi
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/Hero1.png'})` }}>
-      <div className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-16 font-body">
+    <div 
+      className="relative hero-background" 
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/hero1.png'})` }} // Pastikan nama file sesuai
+    >
+      <div className="hero-content">
         {/* Nama Perusahaan */}
         <h1 className="text-white text-xl md:text-2xl font-semibold animate-fade-in" style={{ fontFamily: 'sans-serif', animationDelay: '0.5s' }}>
           PT. SAWITECH PADANG
@@ -22,9 +25,9 @@ const HeroSection = () => {
         </p>
 
         {/* Tombol */}
-        <div className="space-x-4 animate-slide-in" style={{ animationDelay: '2s' }}>
+        <div className="animate-slide-in" style={{ animationDelay: '2s' }}>
           <button
-            className="bg-[#F57C00] text-white px-6 py-3 rounded hover:bg-[#FF9800] transition duration-300"
+            className="bg-[#F57C00] text-white px-6 py-3 rounded hover:bg-[#FF9800] transition duration-300 w-full" // Tombol lebar penuh
             style={{ fontFamily: 'sans-serif' }}
           >
             OUR PROJECT

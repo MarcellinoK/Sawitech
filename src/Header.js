@@ -20,14 +20,14 @@ const Header = () => {
       <div className="flex items-center">
         {/* Logo and Title */}
         <div className="flex items-center">
-          <img src="/logo.png" alt="SAWITECH Logo" className="h-10" />
+          <img src={process.env.PUBLIC_URL + '/logo.png'} alt="SAWITECH Logo" className="h-10" />
           <span className="text-white font-bold ml-2 text-xl md:text-2xl" style={{ fontFamily: 'sans-serif' }}>
             SAWITECH
           </span>
         </div>
 
         {/* Specialist Text */}
-        <span className="hidden lg:inline-block text-gray-300" style={{ fontFamily: 'sans-serif', fontSize: '12px', marginLeft: '-126px', marginTop: '33px' }}>
+        <span className="inline-block text-gray-300" style={{ fontFamily: 'sans-serif', fontSize: '12px', marginLeft: '10px', marginTop: '8px' }}>
           Specialist Supplier Of Palm Oil Mill Spares
         </span>
       </div>

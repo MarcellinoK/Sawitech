@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Sawitech/static/css/main.582b162d.css",
-    "main.js": "/Sawitech/static/js/main.9a481f65.js",
+    "main.css": "/Sawitech/static/css/main.76f021ea.css",
+    "main.js": "/Sawitech/static/js/main.c81358d1.js",
     "static/js/453.870fef93.chunk.js": "/Sawitech/static/js/453.870fef93.chunk.js",
     "index.html": "/Sawitech/index.html",
-    "main.582b162d.css.map": "/Sawitech/static/css/main.582b162d.css.map",
-    "main.9a481f65.js.map": "/Sawitech/static/js/main.9a481f65.js.map",
+    "main.76f021ea.css.map": "/Sawitech/static/css/main.76f021ea.css.map",
+    "main.c81358d1.js.map": "/Sawitech/static/js/main.c81358d1.js.map",
     "453.870fef93.chunk.js.map": "/Sawitech/static/js/453.870fef93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.582b162d.css",
-    "static/js/main.9a481f65.js"
+    "static/css/main.76f021ea.css",
+    "static/js/main.c81358d1.js"
   ]
 }

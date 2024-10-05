@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
@@ -13,23 +13,27 @@ const Header = () => {
     <header
       className="fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50"
       style={{
-        background: 'linear-gradient(90deg, #696969, #1A1A1D)', // Gradasi warna
-        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', // Bayangan untuk header
+        background: 'linear-gradient(90deg, #696969, #1A1A1D)',
+        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
       }}
     >
       <div className="flex items-center">
         {/* Logo and Title */}
         <div className="flex items-center">
           <img src={process.env.PUBLIC_URL + '/logo.png'} alt="SAWITECH Logo" className="h-10" />
-          <span className="text-white font-bold ml-2 text-xl md:text-2xl" style={{ fontFamily: 'sans-serif' }}>
-            SAWITECH
-          </span>
+          <div className="flex flex-col ml-2">
+            <span className="text-white font-bold text-xl md:text-2xl" style={{ fontFamily: 'sans-serif' }}>
+              SAWITECH
+            </span>
+            {/* Specialist Text */}
+            <span
+              className="text-gray-300 text-sm md:text-base"
+              style={{ fontFamily: 'sans-serif', marginTop: '-4px' }}
+            >
+              Specialist Supplier Of Palm Oil Mill Spares
+            </span>
+          </div>
         </div>
-
-        {/* Specialist Text */}
-        <span className="inline-block text-gray-300" style={{ fontFamily: 'sans-serif', fontSize: '12px', marginLeft: '10px', marginTop: '8px' }}>
-          Specialist Supplier Of Palm Oil Mill Spares
-        </span>
       </div>
 
       {/* Hamburger menu for mobile */}
@@ -71,11 +75,11 @@ const Header = () => {
           <Link to="/about" className="py-2 text-white font-bold" onClick={() => setMenuOpen(false)}>
             ABOUT US
           </Link>
-          <Link to="/services" className="py-2 text-white font-bold" onClick={() => setMenuOpen(false)}>
-            OUR SERVICES
+          <Link to="/projects" className="py-2 text-white font-bold" onClick={() => setMenuOpen(false)}>
+            PROJECT
           </Link>
           <Link to="/product" className="py-2 text-white font-bold" onClick={() => setMenuOpen(false)}>
-            OUR CLIENTS
+            OUR PRODUCT
           </Link>
           <Link to="/contact" className="py-2 text-white font-bold" onClick={() => setMenuOpen(false)}>
             CONTACT

@@ -1,0 +1,102 @@
+/* Gradien dari bagian bawah menuju hitam */
+.bg-gradient-to-black {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8));
+}
+
+/* Styling untuk Bagian 'Our Services' */
+.our-service-section {
+  padding: 4rem 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+/* Bagian untuk ikon dan teks layanan */
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 4rem; /* Ukuran ikon */
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+.service-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Gambar Tengah */
+.engineer-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.engineer-image {
+  width: 12rem; /* Ukuran gambar */
+  height: auto; /* Tinggi otomatis */
+  object-fit: cover; /* Agar gambar tidak terpotong */
+  margin: 0 auto; /* Center gambar */
+}
+
+/* Mengatur Grid agar Ikon Sejajar dengan Baik */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom di layar kecil */
+  }
+
+  .engineer-image {
+    width: 10rem; /* Perkecil gambar di layar kecil */
+  }
+}
+
+/* Styling Statistik (untuk kotak angka) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Empat kolom untuk statistik */
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.stats-box {
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Border ringan */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Bayangan ringan */
+  transition: all 0.3s ease; /* Animasi hover */
+}
+
+.stats-box:hover {
+  transform: translateY(-5px); /* Efek melayang saat hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Bayangan saat hover */
+}
+
+/* Warna angka */
+.stats-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #dd6b20; /* Warna oranye */
+}
+
+.stats-label {
+  font-size: 1rem;
+  color: #2d3748; /* Warna abu-abu gelap */
+}

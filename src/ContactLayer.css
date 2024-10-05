@@ -1,0 +1,72 @@
+/* Warna ikon */
+.icon-color {
+  color: #FF8C00; /* Warna oranye untuk ikon */
+}
+
+/* Kontainer Contact Layer dengan Gradien Background */
+.contact-layer {
+  max-width: 100%;
+  height: auto;
+  margin-top: -30px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Shadow lebih halus */
+  background: linear-gradient(to bottom, #1a1a1a, #FFFFFF); /* Gradien dari abu-abu gelap ke putih */
+  border-radius: 10px;
+  color: white; /* Default: Teks putih untuk bagian gelap */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards; /* Animasi masuk */
+}
+
+/* Menyesuaikan teks untuk terlihat di background gradien */
+.contact-layer p {
+  font-weight: 300;
+  color: #FFFFFF; /* Teks putih untuk bagian gelap */
+}
+
+.contact-layer p.text-lg {
+  font-weight: 600;
+}
+
+/* Teks di bagian bawah dengan latar belakang putih harus gelap */
+.contact-layer p.dark-text {
+  color: #333333; /* Teks gelap untuk bagian bawah background putih */
+}
+
+/* Garis Pemisah (HR) dengan Gradien */
+.divider {
+  width: 2px;  /* Lebar garis */
+  height: 100px; /* Tinggi garis */
+  background: linear-gradient(to bottom, black, white); /* Gradien dari hitam ke putih */
+  margin: 0 20px; /* Memberi ruang antara elemen */
+}
+
+/* Transisi untuk tampilan layer */
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Hover pada seluruh layer */
+.contact-layer:hover {
+  background: linear-gradient(to bottom, #1F2937, #F8F9FA); /* Gradien terbalik saat hover */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Tampilan responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .contact-layer {
+      flex-direction: column; /* Layout vertikal di layar kecil */
+      text-align: center;
+      padding: 1.5rem; /* Sesuaikan padding di layar kecil */
+  }
+
+  .divider {
+      display: none; /* Hilangkan garis pemisah di layar kecil */
+  }
+}

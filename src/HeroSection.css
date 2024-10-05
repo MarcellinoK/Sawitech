@@ -1,0 +1,64 @@
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Animasi Slide In dari Bawah */
+  @keyframes slideIn {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animasi Zoom In untuk Gambar Latar */
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Menambahkan Kelas Animasi */
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 1.5s ease-in-out forwards;
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 10s ease-in-out infinite alternate;
+  }
+  
+  /* Hero Section Styling */
+  .hero-background {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    animation: zoomIn 20s ease-in-out infinite alternate; /* Menambahkan animasi zoom */
+  }
+  
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4rem; /* Sesuai dengan px-16 */
+    font-family: sans-serif;
+    z-index: 2;
+  }

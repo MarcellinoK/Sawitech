@@ -1,0 +1,54 @@
+/* Credit Layer */
+.credit-layer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.credit-layer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Teks Copyright dan Project By */
+.credit-layer p {
+    margin: 0;
+}
+
+.credit-layer p span {
+    color: #FF8C00; /* Warna oranye untuk IT Developer Sawitech */
+}
+
+/* Social Media Icons */
+.credit-layer a {
+    transition: color 0.3s ease;
+}
+
+.credit-layer a:hover {
+    color: #FF8C00; /* Warna oranye saat hover */
+}
+
+/* Bagian Navigasi */
+.credit-layer .flex a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.credit-layer .flex a:hover {
+    color: #FF8C00; /* Warna oranye saat hover */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .credit-layer .flex {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .credit-layer .flex a {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -44,7 +44,7 @@ const OurService = () => {
 
   useEffect(() => {
     handleScrollAnimation();
-  }, []);
+  }, [handleScrollAnimation]);
 
   return (
     <div ref={serviceSectionRef} className="our-service-section">
